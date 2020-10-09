@@ -6,9 +6,9 @@ function renderElement(movie) {
 
 }
 
-function buildElement({ title, poster_path, vote_average, id }) {
+function buildElement({ title, poster_path, vote_average, id, recommended }) {
   const template = `
-       <article class="movie">
+       <article class="movie ${recommended ? " recommended" : ""} ">
         <img class="movie-poster" src="//image.tmdb.org/t/p/w220_and_h330_face/${poster_path} " alt="">
         <p class="movie-title">${title}</p>
         <p class="movie-id">${id}</p>
@@ -28,6 +28,6 @@ function cleanMovieList() {
 
 export default function renderMovieList(list) {
   cleanMovieList()
-  /* console.table(list, ["id", "title", "poster_path", "vote_average"]) */
-  list.forEach(renderElement);
+/*   console.table(list, ["id", "title", "poster_path", "vote_average"])
+ */  list.forEach(renderElement);
 }
