@@ -1,3 +1,11 @@
+
+function renderMovieListFromMap(list, map) {
+  cleanMovieList()
+  list.forEach(movieID => renderElement(map.get(movieID)))
+
+}
+
+
 function renderElement(movie) {
   const element = buildElement(movie)
   /* document.createElement("h1")
@@ -30,4 +38,8 @@ export default function renderMovieList(list) {
   cleanMovieList()
 /*   console.table(list, ["id", "title", "poster_path", "vote_average"])
  */  list.forEach(renderElement);
+}
+
+export {
+  renderMovieListFromMap
 }

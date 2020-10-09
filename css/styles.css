@@ -21,6 +21,7 @@ body {
 
 .actions {
   display: flex;
+  justify-content: center;
   gap: 21px;
   padding: 1em 0 2em;
 }
@@ -62,7 +63,7 @@ body {
 } 
  button {
   font-size: 1rem;
-  background: #3f69ff;
+  background: black;
   padding: 1em;
   color: white;
   border: none;
